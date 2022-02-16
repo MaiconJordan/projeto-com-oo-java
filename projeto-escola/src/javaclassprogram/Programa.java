@@ -63,11 +63,15 @@ public class Programa {
 
 
 		for (Aluno aluno: alunos) {
-			System.out.println(aluno);
-			System.out.println("teste2");
-			System.out.println("A média do aluno é " + aluno.getMediaNota());
-			System.out.println(aluno.getAprovado2());
-			System.out.println("-----------------------------------------------------------");
+
+			if(aluno.getNome().equalsIgnoreCase("Maicon")) {
+
+				System.out.println("A média do aluno é " + aluno.getMediaNota());
+				System.out.println(aluno.getAprovado2());
+				System.out.println("-----------------------------------------------------------");
+				break;
+			}
+
 		}
 		
 		
