@@ -34,6 +34,7 @@ public class Programa {
         for (int pos = 1; pos <= 4; pos++) {
             String nomeDisciplina = JOptionPane.showInputDialog("Qual a o nome da disciplina " + pos + " ?");
             String notaDisciplina = JOptionPane.showInputDialog("Qual a nota da disciplina " + pos + " ?");
+            System.out.println("------------------------------------------------------------");
 
             Disciplina disciplinas = new Disciplina();
 
@@ -59,35 +60,16 @@ public class Programa {
 
     }
 
-        for (Aluno aluno: alunos) {
+       for(int pos = 0; pos < alunos.size(); pos++){
+           Aluno aluno = alunos.get(pos);
+           System.out.println(aluno.getNome());
 
-            if (aluno.getNome().equalsIgnoreCase("Maicon")) {
+           for (int posd = 0 ;posd < aluno.getDisciplinas().size() ; posd++){
+               Disciplina disc = aluno.getDisciplinas().get(posd);
+               System.out.println("Materia = " + disc.getDisciplina() + " Nota = " + disc.getNota());
 
-                alunos.remove(aluno);
-
-                break;
-            } else {
-
-                System.out.println(aluno.getNome());
-                System.out.println("A média do aluno é " + aluno.getMediaNota());
-                System.out.println(aluno.getAprovado2());
-                System.out.println("-----------------------------------------------------------");
-
-            }
-
-
-        }
-
-        for (Aluno aluno: alunos) {
-            System.out.println("Alunos que sobraram na lista");
-            System.out.println(aluno.getNome());
-            System.out.println("Suas Matérias são: ");
-
-            for (Disciplina disciplina: aluno.getDisciplinas()) {
-                System.out.println(disciplina.getDisciplina());
-            }
-
-        }
+           }
+       }
 
     }
 
