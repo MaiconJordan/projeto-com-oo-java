@@ -1,5 +1,7 @@
 package programajavaclasses;
 
+import cursojava.constantes.StatusAluno;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -183,12 +185,12 @@ public class Aluno {
             double mediaNota = this.getMediaNota();
             if(mediaNota >= 50) {
                 if(mediaNota >= 70) {
-                    return "Aluno está aprovado";
+                    return StatusAluno.APROVADO;
                 } else {
-                    return "Aluno está em recuperação";
+                    return StatusAluno.RECUPERACAO;
                 }
             } else {
-                return "Aluno está reprovado";
+                return StatusAluno.REPROVADO;
             }
 
         }

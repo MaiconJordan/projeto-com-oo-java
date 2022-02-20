@@ -68,7 +68,7 @@ public class Programa {
                trocar.setNome("Aluno foi trocado");
 
                Disciplina disciplina = new Disciplina();
-               disciplina.setDisciplina("Matematica");
+               disciplina.setDisciplina("Matemática");
                disciplina.setNota(96);
 
                trocar.getDisciplinas().add(disciplina);
