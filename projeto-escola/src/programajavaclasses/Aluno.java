@@ -5,15 +5,10 @@ import cursojava.constantes.StatusAluno;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Aluno {
+public class Aluno extends Pessoa {
 
-        private String nome;
-        private int idade;
-        private String dataNascimento;
-        private String cpf;
-        private String nomeMae;
+
         private String codMatricula;
-
 
         /*Listas*/
         private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
