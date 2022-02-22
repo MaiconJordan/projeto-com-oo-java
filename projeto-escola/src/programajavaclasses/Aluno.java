@@ -190,4 +190,8 @@ public class Aluno extends Pessoa {
 
         }
 
+        public String msgMaiorIdade(){
+            return this.pessoaMaiorIdade() ? "aluno maior de idade" : "Aluno menor de idade";
+        }
+
 }
