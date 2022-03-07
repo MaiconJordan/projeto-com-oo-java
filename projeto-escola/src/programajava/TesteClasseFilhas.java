@@ -24,5 +24,9 @@ public class TesteClasseFilhas {
 
         System.out.println(aluno2.pessoaMaiorIdade() +" - " + aluno2.msgMaiorIdade() );
 
+        System.out.println("salario é" + aluno2.salario() );
+
+
+
     }
 }

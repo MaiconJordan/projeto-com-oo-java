@@ -43,4 +43,9 @@ public class Diretor extends Pessoa {
                 ", nomeMae='" + nomeMae + '\'' +
                 '}';
     }
+
+    @Override
+    public double salario() {
+        return 3900.00;
+    }
 }

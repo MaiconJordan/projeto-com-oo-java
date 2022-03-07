@@ -82,7 +82,12 @@ public class Aluno extends Pessoa {
             this.nomeMae = nomeMae;
         }
 
-        public String getCodMatricula() {
+    @Override
+    public double salario() {
+        return 1500.90;
+    }
+
+    public String getCodMatricula() {
             return codMatricula;
         }
 
