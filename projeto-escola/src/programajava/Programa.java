@@ -3,6 +3,7 @@ package programajava;
 import cursojava.constantes.StatusAluno;
 import programajavaclasses.Aluno;
 import programajavaclasses.Disciplina;
+import programajavaclasses.Secretario;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -16,8 +17,12 @@ public class Programa {
         String login = JOptionPane.showInputDialog("Qual o login?");
         String senha = JOptionPane.showInputDialog("Qual a senhan?");
 
-        if(login.equalsIgnoreCase("admin") &&
-                 senha.equalsIgnoreCase("admin")) {
+        Secretario secretario = new Secretario();
+
+        secretario.setLogin(login);
+        secretario.setSenha(senha);
+
+        if(secretario.autenticar()) {
 
             List<Aluno> alunos = new ArrayList<Aluno>();
 
