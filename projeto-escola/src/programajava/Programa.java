@@ -1,10 +1,10 @@
 package programajava;
 
+import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
-import cursojava.interfaces.PermitirAcesso;
 import programajavaclasses.Aluno;
+import programajavaclasses.Diretor;
 import programajavaclasses.Disciplina;
-import programajavaclasses.Secretario;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -18,11 +18,7 @@ public class Programa {
         String login = JOptionPane.showInputDialog("Qual o login?");
         String senha = JOptionPane.showInputDialog("Qual a senhan?");
 
-        PermitirAcesso permitiracesso = new Secretario(login,senha);
-
-
-
-        if(permitiracesso.autenticar()) {
+        if(new FuncaoAutenticacao(new Diretor(login,senha)).autenticar()) {// vou travar o contrato para autorizar somente quem tem o contrato legitimo
 
             List<Aluno> alunos = new ArrayList<Aluno>();
 
