@@ -1,6 +1,7 @@
 package programajava;
 
 import cursojava.constantes.StatusAluno;
+import cursojava.interfaces.PermitirAcesso;
 import programajavaclasses.Aluno;
 import programajavaclasses.Disciplina;
 import programajavaclasses.Secretario;
@@ -17,12 +18,11 @@ public class Programa {
         String login = JOptionPane.showInputDialog("Qual o login?");
         String senha = JOptionPane.showInputDialog("Qual a senhan?");
 
-        Secretario secretario = new Secretario();
+        PermitirAcesso permitiracesso = new Secretario(login,senha);
 
-        secretario.setLogin(login);
-        secretario.setSenha(senha);
 
-        if(secretario.autenticar()) {
+
+        if(permitiracesso.autenticar()) {
 
             List<Aluno> alunos = new ArrayList<Aluno>();
 
