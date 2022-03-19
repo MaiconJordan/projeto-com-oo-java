@@ -76,4 +76,9 @@ public class Diretor extends Pessoa implements PermitirAcesso {
 
         return login.equals("diretor") && senha.equals("123456");
     }
+
+    public boolean nomeSecretario() {
+        nome = "Carlos";
+        return true;
+    }
 }

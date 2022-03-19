@@ -90,5 +90,14 @@ public class Secretario extends Pessoa implements PermitirAcesso {
     public boolean autenticar() {
 
         return login.equals("admin") && senha.equals("12345654321");
+
     }
+
+    @Override
+    public boolean nomeSecretario() {
+        nome = "Ana";
+        return true;
+    }
+
+
 }

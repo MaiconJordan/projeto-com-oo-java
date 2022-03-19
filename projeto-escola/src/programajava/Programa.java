@@ -5,6 +5,7 @@ import cursojava.constantes.StatusAluno;
 import programajavaclasses.Aluno;
 import programajavaclasses.Diretor;
 import programajavaclasses.Disciplina;
+import programajavaclasses.Secretario;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -18,7 +19,12 @@ public class Programa {
         String login = JOptionPane.showInputDialog("Qual o login?");
         String senha = JOptionPane.showInputDialog("Qual a senhan?");
 
-        if(new FuncaoAutenticacao(new Diretor(login,senha)).autenticar()) {// vou travar o contrato para autorizar somente quem tem o contrato legitimo
+        Secretario sec = new Secretario();
+
+        sec.setNome("Ana");
+
+
+        if(new FuncaoAutenticacao(new Diretor(login,senha)).autenticar() && sec.nomeSecretario() ) {// vou travar o contrato para autorizar somente quem tem o contrato legitimo
 
             List<Aluno> alunos = new ArrayList<Aluno>();
 
@@ -28,20 +34,19 @@ public class Programa {
             for (int qtd = 1; qtd <= 5; qtd++) {
 
                 String nome = JOptionPane.showInputDialog("Qual o nome do aluno");
-		/*String cpf = JOptionPane.showInputDialog("Qual o CPF do aluno");
+		String cpf = JOptionPane.showInputDialog("Qual o CPF do aluno");
 		String idade = JOptionPane.showInputDialog("Qual a idade do aluno");
 		String dataNascimento = JOptionPane.showInputDialog("Qual a data de nascimento do aluno");
 		String nomeMae = JOptionPane.showInputDialog("QQual o nome da mãe do aluno");
-		String codMatricula = JOptionPane.showInputDialog("Qual o codido de matricula do aluno");*/
+		String codMatricula = JOptionPane.showInputDialog("Qual o codido de matricula do aluno");
 
                 Aluno aluno1 = new Aluno();
-
                 aluno1.setNome(nome);
-		/*aluno1.setCpf(cpf);
+		aluno1.setCpf(cpf);
 		aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
 		aluno1.setNomeMae(nomeMae);
-		aluno1.setCodMatricula(codMatricula);*/
+		aluno1.setCodMatricula(codMatricula);
 
                 for (int pos = 1; pos <= 1; pos++) {
                     String nomeDisciplina = JOptionPane.showInputDialog("Qual a o nome da disciplina " + pos + " ?");

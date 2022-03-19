@@ -7,5 +7,7 @@ public interface PermitirAcesso {
 
     public boolean autenticar();
 
+    public boolean nomeSecretario();
+
 
 }
